@@ -57,5 +57,5 @@ The ```.textproto``` file contains the data in a human readable format
 
 ## license
 
-The codebase is distributed under the GNU General Public License v3 (GPLv3). Please see ```License.txt``` for details.
+The codebase is distributed under the Apache-2.0 license. Please see ```License.txt``` for details.
 
