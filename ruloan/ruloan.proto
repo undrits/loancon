@@ -1,0 +1,45 @@
+// protobuf lexicon for russian loanwords
+
+syntax = "proto3";
+
+package ruloan;
+
+message Features {
+  string animacy = 1;
+  string case = 2;
+  string gender = 3;
+  string number = 4;
+  string aspect = 5;
+  string mood = 6;
+  string tense = 7;
+  string verbform = 8;
+  string voice = 9;
+  string degree = 10;
+  string variant = 11;
+  string person = 12;
+}
+
+message Wordform {
+  string wordform = 1;
+  int32 frequency = 2;
+  string upos = 3;
+  Features features = 4;
+}
+
+message Analysis {
+  string sources = 1;
+  int32 frequency = 2;
+  string upos = 3;
+  string donor = 4;
+  string spacy_tag = 5;
+  string pymystem_lemma = 6;
+  repeated Wordform wordform = 7;
+}
+
+message Lexicon {
+  message Analyses {
+    repeated Analysis analysis = 1;
+  }
+
+  map<string, Analyses> analyses = 1;
+}
